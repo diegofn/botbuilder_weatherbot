@@ -1,0 +1,52 @@
+[import](common.lg)
+
+# SendActivity_sf2j4b()
+[Activity
+    Text = ${SendActivity_sf2j4b_text()}
+]
+
+# SendActivity_sf2j4b_text()
+- Voy a averiguar el clima en tu zona.
+# TextInput_Prompt_4p9iHs()
+[Activity
+    Text = ${TextInput_Prompt_4p9iHs_text()}
+]
+
+# TextInput_Prompt_4p9iHs_text()
+- Ingresa tu código postal
+# TextInput_UnrecognizedPrompt_4p9iHs()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_4p9iHs_text()}
+]
+
+# TextInput_UnrecognizedPrompt_4p9iHs_text()
+- Lo siento, no entiendo '${this.value}'. Por favor, especifica un código postal de 5 dígitos por ejemplo 12345.
+# TextInput_InvalidPrompt_4p9iHs()
+[Activity
+    Text = ${TextInput_InvalidPrompt_4p9iHs_text()}
+]
+
+# TextInput_InvalidPrompt_4p9iHs_text()
+- Lo siento, '${this.value}' no es valido. Debes ingresar un código postal de 5 dígitos. Por favor, especifica un código postal por ejemplo 12345. 
+# SendActivity_9lbAOv()
+[Activity
+    Text = ${SendActivity_9lbAOv_text()}
+    Attachments = ${SendActivity_9lbAOv_attachment_fIRDJZ()}
+]
+
+# SendActivity_9lbAOv_text()
+- El clima actualmente es ${dialog.fahrenheit}F o ${dialog.celsius}C y ${dialog.weather}
+# SendActivity_zfvYGn()
+[Activity
+    Text = ${SendActivity_zfvYGn_text()}
+]
+
+# SendActivity_zfvYGn_text()
+- Ups😒 algo salio mal: ${dialog.api_response.content.message}.
+# SendActivity_9lbAOv_attachment_fIRDJZ()
+[ThumbnailCard
+  title = Clima en ${dialog.city} en ${dialog.country}
+  subtitle = Clima actualmente
+  text = Es "${dialog.weather}" en ${user.postalcode} y la temperatura es ${dialog.fahrenheit}&deg;F o ${dialog.celsius}&deg;C. Feliz día 😊.
+  image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]

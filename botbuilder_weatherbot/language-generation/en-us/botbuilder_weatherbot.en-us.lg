@@ -6,11 +6,11 @@
 ]
 
 # SendActivity_Greeting_text()
-- Bienvenido al bot del clima en BotComposer
+- Bienvenido al bot construido en BotComposer. Escribe *doc* para iniciar.
 # SendActivity_DidNotUnderstand()
 [Activity
     Text = ${SendActivity_DidNotUnderstand_text()}
 ]
 
 # SendActivity_DidNotUnderstand_text()
-- Disculpa no entendì lo que dices
+- Disculpa no entendí lo que dices.

@@ -31,7 +31,6 @@
 # SendActivity_9lbAOv()
 [Activity
     Text = ${SendActivity_9lbAOv_text()}
-    Attachments = ${SendActivity_9lbAOv_attachment_fIRDJZ()}
 ]
 
 # SendActivity_9lbAOv_text()
@@ -43,10 +42,3 @@
 
 # SendActivity_zfvYGn_text()
 - Ups😒 algo salio mal: ${dialog.api_response.content.message}.
-# SendActivity_9lbAOv_attachment_fIRDJZ()
-[ThumbnailCard
-  title = Clima en ${dialog.city} en ${dialog.country}
-  subtitle = Clima actualmente
-  text = Es "${dialog.weather}" en ${user.postalcode} y la temperatura es ${dialog.fahrenheit}&deg;F o ${dialog.celsius}&deg;C. Feliz día 😊.
-  image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
-]
